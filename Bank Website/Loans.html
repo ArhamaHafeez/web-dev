@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Secure Bank | Loans</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+<style>
+
+/* Loan Hero */
+
+.loan-hero{
+
+    background:linear-gradient(135deg,#55246b,#2a2969);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+
+}
+
+
+.loan-hero h1{
+
+    font-size:45px;
+
+}
+
+
+.loan-hero p{
+
+    font-size:18px;
+    margin-top:15px;
+
+}
+
+
+
+/* Loan Cards */
+
+.loan-section{
+
+    padding:60px 8%;
+    background:#f8f5ff;
+
+}
+
+
+.loan-section h2{
+
+    text-align:center;
+    color:#4B0082;
+    margin-bottom:40px;
+
+}
+
+
+.loan-cards{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+
+}
+
+
+.loan-card{
+
+    background:white;
+    padding:30px;
+    text-align:center;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.3s;
+
+}
+
+
+.loan-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+.loan-card i{
+
+    font-size:45px;
+    color:#6A0DAD;
+    margin-bottom:20px;
+
+}
+
+
+.loan-card h3{
+
+    color:#4B0082;
+    margin-bottom:15px;
+
+}
+
+
+
+/* Apply Form */
+
+.apply-section{
+
+    padding:60px 8%;
+    background:white;
+
+}
+
+
+.apply-box{
+
+    max-width:600px;
+    margin:auto;
+    background:#f8f5ff;
+    padding:35px;
+    border-radius:20px;
+
+}
+
+.apply-box h2{
+
+    text-align:center;
+    color:#4B0082;
+    margin-bottom:25px;
+
+}
+
+
+.apply-box input,
+.apply-box select,
+.apply-box textarea{
+
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:10px;
+
+}
+.apply-box input :hover{
+    background-color: #bab9b9;
+    border-color: #55246b;
+}
+
+.apply-box button{
+
+    width:100%;
+    padding:14px;
+    background:#6A0DAD;
+    color:white;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+
+}
+
+
+.apply-box button:hover{
+
+    background:#4B0082;
+    transform: translateY(-5px);
+    box-shadow: 0 0 2px 2px #3f2c47;
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+
+<!-- ================= HEADER SAME AS HOME ================= -->
+
+
+<header>
+
+
+<div class="logo">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<h2>Secure Bank</h2>
+
+</div>
+
+
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+
+<li>
+<a href="login.html">Login</a>
+</li>
+
+
+<li>
+<a href="register.html">Sign Up</a>
+</li>
+
+
+<li>
+<a href="account.html">Account</a>
+</li>
+
+
+<li>
+<a href="transfer.html">Transfer</a>
+</li>
+
+
+<li>
+<a href="loans.html" class="active">Loans</a>
+</li>
+
+<li><a href="credit-card.html">Credit Card</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="security.html">Security</a></li>
+
+<li>
+<a href="contact.html">Contact</a>
+</li>
+<li>
+<a href="thankyou.html">Thank You</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+</header>
+
+
+
+
+<!-- ================= LOAN HERO ================= -->
+
+
+<section class="loan-hero">
+
+<h1>Loan Services</h1>
+
+<p>
+Choose the right loan for your dreams and future goals.
+</p>
+
+</section>
+
+
+
+
+<!-- ================= LOAN TYPES ================= -->
+
+
+<section class="loan-section">
+
+
+<h2>Our Loan Options</h2>
+
+
+<div class="loan-cards">
+
+
+
+<div class="loan-card">
+
+<i class="fa-solid fa-house"></i>
+
+<h3>Home Loan</h3>
+
+<p>
+Affordable home financing with flexible repayment plans.
+</p>
+
+</div>
+
+
+
+<div class="loan-card">
+
+<i class="fa-solid fa-car"></i>
+
+<h3>Car Loan</h3>
+
+<p>
+Get your dream car with easy monthly installments.
+</p>
+
+</div>
+
+
+
+
+<div class="loan-card">
+
+<i class="fa-solid fa-graduation-cap"></i>
+
+<h3>Education Loan</h3>
+
+<p>
+Support your studies with reliable financial assistance.
+</p>
+
+</div>
+
+
+
+
+
+<div class="loan-card">
+
+<i class="fa-solid fa-business-time"></i>
+
+<h3>Business Loan</h3>
+
+<p>
+Grow your business with secure funding solutions.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ================= APPLICATION FORM ================= -->
+
+
+<section class="apply-section">
+
+
+<div class="apply-box">
+
+
+<h2>Apply For Loan</h2>
+
+
+<form>
+
+
+<input 
+type="text"
+placeholder="Full Name"
+required>
+
+
+
+<input
+type="email"
+placeholder="Email Address"
+required>
+
+
+
+<input
+type="number"
+placeholder="Loan Amount"
+required>
+
+
+
+<select>
+
+<option>Select Loan Type</option>
+
+<option>Home Loan</option>
+
+<option>Car Loan</option>
+
+<option>Education Loan</option>
+
+<option>Business Loan</option>
+
+</select>
+
+
+
+<textarea
+placeholder="Loan Purpose"
+rows="4"></textarea>
+
+
+
+<button>
+
+Submit Application
+
+</button>
+
+
+</form>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer>
+
+<p>
+© 2026 Secure Bank | Secure Digital Banking
+</p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

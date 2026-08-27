@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="quiz">
+
+    <h1>My Quiz App</h1>
+
+    <div id="q1">
+        <h2>1. What is HTML?</h2>
+
+        <button onclick="answer1('wrong', this)">
+            Hyper Tool Language
+        </button>
+
+        <button onclick="answer1('correct', this)">
+            Hyper Text Markup Language
+        </button>
+
+        <button onclick="answer1('wrong', this)">
+            High Text Language
+        </button>
+
+        <br>
+        <button onclick="nextQuestion(1)">Next</button>
+    </div>
+
+
+    <div id="q2">
+        <h2>2. Which language is used for styling?</h2>
+
+        <button onclick="answer2('wrong', this)">
+            HTML
+        </button>
+
+        <button onclick="answer2('correct', this)">
+            CSS
+        </button>
+
+        <button onclick="answer2('wrong', this)">
+            Java
+        </button>
+
+        <br>
+        <button onclick="nextQuestion(2)">Next</button>
+    </div>
+
+
+    <div id="q3">
+        <h2>3. Which language makes a website interactive?</h2>
+
+        <button onclick="answer3('wrong', this)">
+            HTML
+        </button>
+
+        <button onclick="answer3('wrong', this)">
+            CSS
+        </button>
+
+        <button onclick="answer3('correct', this)">
+            JavaScript
+        </button>
+
+        <br>
+        <button onclick="nextQuestion(3)">Next</button>
+    </div>
+
+
+    <div id="q4">
+        <h2>4. Which tag is used for a paragraph?</h2>
+
+        <button onclick="answer4('correct', this)">
+            &lt;p&gt;
+        </button>
+
+        <button onclick="answer4('wrong', this)">
+            &lt;h1&gt;
+        </button>
+
+        <button onclick="answer4('wrong', this)">
+            &lt;br&gt;
+        </button>
+
+        <br>
+        <button onclick="nextQuestion(4)">Next</button>
+    </div>
+
+
+    <div id="q5">
+        <h2>5. Which symbol is used for ID in CSS?</h2>
+
+        <button onclick="answer5('wrong', this)">
+            .
+        </button>
+
+        <button onclick="answer5('correct', this)">
+            #
+        </button>
+
+        <button onclick="answer5('wrong', this)">
+            *
+        </button>
+
+        <br>
+        <button onclick="nextQuestion(5)">Next</button>
+    </div>
+
+
+    <div id="q6">
+        <h2>6. Which symbol is used for class in CSS?</h2>
+
+        <button onclick="answer6('wrong', this)">
+            #
+        </button>
+
+        <button onclick="answer6('correct', this)">
+            .
+        </button>
+
+        <button onclick="answer6('wrong', this)">
+            @
+        </button>
+
+        <br>
+        <button onclick="nextQuestion(6)">Next</button>
+    </div>
+
+
+    <div id="q7">
+        <h2>7. Which tag creates a button?</h2>
+
+        <button onclick="answer7('correct', this)">
+            &lt;button&gt;
+        </button>
+
+        <button onclick="answer7('wrong', this)">
+            &lt;btn&gt;
+        </button>
+
+        <button onclick="answer7('wrong', this)">
+            &lt;click&gt;
+        </button>
+
+        <br>
+        <button onclick="nextQuestion(7)">Next</button>
+    </div>
+
+
+    <div id="q8">
+        <h2>8. Which one is a JavaScript variable keyword?</h2>
+
+        <button onclick="answer8('correct', this)">
+            var
+        </button>
+
+        <button onclick="answer8('wrong', this)">
+            make
+        </button>
+
+        <button onclick="answer8('wrong', this)">
+            variable
+        </button>
+
+        <br>
+        <button onclick="nextQuestion(8)">Next</button>
+    </div>
+
+
+    <div id="q9">
+        <h2>9. Which command prints something in console?</h2>
+
+        <button onclick="answer9('wrong', this)">
+            print()
+        </button>
+
+        <button onclick="answer9('correct', this)">
+            console.log()
+        </button>
+
+        <button onclick="answer9('wrong', this)">
+            show()
+        </button>
+
+        <br>
+        <button onclick="nextQuestion(9)">Next</button>
+    </div>
+
+
+    <div id="q10">
+        <h2>10. Which tag is used for an image?</h2>
+
+        <button onclick="answer10('wrong', this)">
+            &lt;image&gt;
+        </button>
+
+        <button onclick="answer10('correct', this)">
+            &lt;img&gt;
+        </button>
+
+        <button onclick="answer10('wrong', this)">
+            &lt;pic&gt;
+        </button>
+
+        <br>
+        <button onclick="showResult()">Finish</button>
+    </div>
+
+
+    <h2 id="result"></h2>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+

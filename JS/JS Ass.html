@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Online Shopping Discount System</title>
+    </head>
+    <body>
+        <script>
+         let amo = "Number" (prompt("Total Shopping Amount"))
+         let membership= (prompt("Are You A Member? (Yes/No)"))
+         let Discount=0;
+         // Apply Discount based on shopping amount 
+         if (totalamount>=10000){
+            Discount= 20;
+         } 
+         else if (totalamount>=5000){
+            Discount=10;
+         }
+         else if (totalamount>=2000){
+            Discount=5
+         }
+         else {
+            Discount=0;
+         }
+         // Additional Discount for Members
+         if (membership=== "yes"){
+            Discount= Discount+5;
+         }
+         let DiscountAmount = totalamount + discount / 100;
+         let finalamount = totalamount - discountAmount;
+         console.log("totalamount");
+         console.log("dicount")
+         console.log("DiscountAmount");
+         console.log("Final Amount");
+        </script>
+    </body>
+</html>

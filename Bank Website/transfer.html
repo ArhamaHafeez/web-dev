@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Secure Bank | Money Transfer</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+
+        <i class="fa-solid fa-building-columns"></i>
+
+        <h2>Secure Bank</h2>
+
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="login.html">Login</a></li>
+
+            <li><a href="register.html">Sign Up</a></li>
+
+            <li><a href="account.html">Account</a></li>
+
+            <li><a href="transfer.html" class="active">Transfer</a></li>
+
+            <li><a href="loans.html">Loans</a></li>
+
+            <li><a href="credit-card.html">Credit Card</a></li>
+
+            <li><a href="services.html">Services</a></li>
+
+            <li><a href="security.html">Security</a></li>
+
+
+            <li><a href="contact.html">Contact</a></li>
+            <li>
+            <a href="thankyou.html">Thank You</a>
+            </li>
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="transfer-hero">
+
+    <h1>Secure Money Transfer</h1>
+
+    <p>
+        Send money quickly and securely to any bank account.
+    </p>
+
+</section>
+
+<!-- ================= TRANSFER FORM ================= -->
+
+<section class="transfer-section">
+
+    <div class="transfer-box">
+
+        <h2>Transfer Funds</h2>
+
+        <form id="transferForm">
+
+            <div class="input-group">
+
+                <label>Sender Account Number</label>
+
+                <input
+                    type="text"
+                    id="sender"
+                    placeholder="Enter Sender Account Number"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Recipient Name</label>
+
+                <input
+                    type="text"
+                    id="receiverName"
+                    placeholder="Enter Recipient Name"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Recipient Account Number</label>
+
+                <input
+                    type="text"
+                    id="receiverAccount"
+                    placeholder="Enter Recipient Account Number"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Amount ($)</label>
+
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Enter Amount"
+                    required>
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Description</label>
+
+                <textarea
+                    id="description"
+                    rows="4"
+                    placeholder="Transfer Description"></textarea>
+
+            </div>
+
+            <button type="submit" class="btn">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Transfer Money
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<!-- ================= RECENT TRANSFERS ================= -->
+
+<section class="history">
+
+    <h2>Recent Transfers</h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>Date</th>
+
+                <th>Recipient</th>
+
+                <th>Amount</th>
+
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>03 Aug 2026</td>
+
+                <td>Sarah Ahmed</td>
+
+                <td>$500</td>
+
+                <td class="success">Completed</td>
+
+            </tr>
+
+            <tr>
+
+                <td>01 Aug 2026</td>
+
+                <td>Ali Khan</td>
+
+                <td>$1200</td>
+
+                <td class="success">Completed</td>
+
+            </tr>
+
+            <tr>
+
+                <td>28 Jul 2026</td>
+
+                <td>Emma Wilson</td>
+
+                <td>$250</td>
+
+                <td class="pending">Pending</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>
+
+        © 2026 Secure Bank | Secure Online Banking
+
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
