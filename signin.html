@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign In | JobNest</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="auth-body">
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header auth-header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo-link">
+                <img src="Jobnest-logo.png" class="main-logo" alt="JobNest Logo">
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Find Jobs</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="contact.html">Contact</a>
+                
+
+            </nav>
+
+
+            <div class="auth-back">
+
+                <a href="index.html">
+                    ← Back to Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= SIGN IN SECTION ================= -->
+
+    <main class="auth-page">
+
+        <div class="auth-container">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="auth-banner">
+
+                <div class="auth-banner-overlay"></div>
+
+                <div class="auth-banner-content">
+
+                    <span class="auth-tag">
+                        WELCOME BACK
+                    </span>
+
+                    <h1>
+                        Your Next Opportunity Is Waiting.
+                    </h1>
+
+                    <p>
+                        Sign in to JobNest and continue your journey toward
+                        discovering meaningful career opportunities.
+                    </p>
+
+
+                    <div class="auth-benefits">
+
+                        <div>
+                            <span>✓</span>
+                            Explore thousands of jobs
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            Manage your applications
+                        </div>
+
+                        <div>
+                            <span>✓</span>
+                            Save your favorite jobs
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="auth-form-side">
+
+                <div class="auth-form-content">
+
+                    <div class="auth-heading">
+
+                        <span class="section-label">
+                            SIGN IN
+                        </span>
+
+                        <h2>
+                            Welcome Back
+                        </h2>
+
+                        <p>
+                            Enter your details to access your JobNest account.
+                        </p>
+
+                    </div>
+
+
+                    <!-- LOGIN FORM -->
+
+                    <form id="signinForm" novalidate>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="auth-form-group">
+
+                            <label for="signinEmail">
+                                Email Address
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    ✉
+                                </span>
+
+                                <input
+                                    type="email"
+                                    id="signinEmail"
+                                    placeholder="Enter your email"
+                                    autocomplete="email"
+                                >
+
+                            </div>
+
+                            <small
+                                class="auth-error"
+                                id="signinEmailError"
+                            ></small>
+
+                        </div>
+
+
+                        <!-- PASSWORD -->
+
+                        <div class="auth-form-group">
+
+                            <div class="password-label-row">
+
+                                <label for="signinPassword">
+                                    Password
+                                </label>
+
+                                <a
+                                    href="forgot-password.html"
+                                    class="forgot-link"
+                                >
+                                    Forgot Password?
+                                </a>
+
+                            </div>
+
+
+                            <div class="input-wrapper password-wrapper">
+
+                                <span class="input-icon">
+                                    🔒
+                                </span>
+
+                                <input
+                                    type="password"
+                                    id="signinPassword"
+                                    placeholder="Enter your password"
+                                    autocomplete="current-password"
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    id="passwordToggle"
+                                    aria-label="Show password"
+                                >
+                                    👁
+                                </button>
+
+                            </div>
+
+                            <small
+                                class="auth-error"
+                                id="signinPasswordError"
+                            ></small>
+
+                        </div>
+
+
+                        <!-- REMEMBER -->
+
+                        <div class="remember-row">
+
+                            <label class="remember-label">
+
+                                <input
+                                    type="checkbox"
+                                    id="rememberMe"
+                                >
+
+                                <span>
+                                    Remember me
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- SUBMIT BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="auth-submit-btn"
+                            id="signinButton"
+                        >
+                            <span class="btn-text">
+                                Sign In
+                            </span>
+
+                            <span class="btn-loader">
+                                Please wait...
+                            </span>
+
+                        </button>
+
+
+                        <!-- SUCCESS / ERROR MESSAGE -->
+
+                        <div
+                            class="auth-message"
+                            id="signinMessage"
+                        ></div>
+
+
+                        <!-- DIVIDER -->
+
+                        <div class="auth-divider">
+
+                            <span>OR</span>
+
+                        </div>
+
+
+                        <!-- CREATE ACCOUNT -->
+
+                        <p class="auth-switch-text">
+
+                            Don't have an account?
+
+                            <a href="create-account.html">
+                                Create Account
+                            </a>
+
+                        </p>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+    <script src="signin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find Jobs | JobNest</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html">
+                <img src="Jobnest-logo.png" class="main-logo" alt="JobNest Logo">
+            </a>
+
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="jobs.html" class="active">Find Jobs</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                
+            </nav>
+
+            <div class="nav-buttons">
+
+                <a class="btn btn-outline btn-small" href="signin.html">
+                    Sign In
+                </a>
+
+                <a class="btn btn-white btn-small" href="create-account.html">
+                    Create Account
+                </a>
+
+                <button class="menu-btn" onclick="toggleMenu()">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PAGE HERO ================= -->
+
+    <section class="jobs-hero">
+
+        <div class="container">
+
+            <div class="jobs-hero-content">
+
+                <span class="eyebrow">
+                    Explore Opportunities
+                </span>
+
+                <h1>Find Your Perfect Job</h1>
+
+                <p>
+                    Discover thousands of career opportunities from leading
+                    companies and take the next step in your professional journey.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SEARCH SECTION ================= -->
+
+    <section class="job-search-section">
+
+        <div class="container">
+
+            <div class="job-search-bar">
+
+                <div class="filter-input">
+
+                    <span>🔍</span>
+
+                    <input
+                        type="text"
+                        id="jobKeyword"
+                        placeholder="Job title, skill or keyword"
+                    >
+
+                </div>
+
+
+                <div class="filter-input">
+
+                    <span>📍</span>
+
+                    <input
+                        type="text"
+                        id="jobLocation"
+                        placeholder="Location"
+                    >
+
+                </div>
+
+
+                <button
+                    class="search-btn"
+                    onclick="filterJobs()"
+                >
+                    Search Jobs
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= JOBS CONTENT ================= -->
+
+    <section class="jobs-section">
+
+        <div class="container jobs-layout">
+
+
+            <!-- ================= SIDEBAR FILTERS ================= -->
+
+            <aside class="jobs-sidebar">
+
+                <div class="filter-header">
+
+                    <h3>Filter Jobs</h3>
+
+                    <button onclick="clearFilters()">
+                        Clear All
+                    </button>
+
+                </div>
+
+
+                <!-- Job Type -->
+
+                <div class="filter-group">
+
+                    <h4>Job Type</h4>
+
+                    <label>
+                        <input type="checkbox" class="job-type" value="Full Time">
+                        Full Time
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="job-type" value="Part Time">
+                        Part Time
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="job-type" value="Contract">
+                        Contract
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="job-type" value="Internship">
+                        Internship
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="job-type" value="Freelance">
+                        Freelance
+                    </label>
+
+                </div>
+
+
+                <!-- Work Mode -->
+
+                <div class="filter-group">
+
+                    <h4>Work Mode</h4>
+
+                    <label>
+                        <input type="checkbox" class="work-mode" value="Remote">
+                        Remote
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="work-mode" value="Hybrid">
+                        Hybrid
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="work-mode" value="On Site">
+                        On Site
+                    </label>
+
+                </div>
+
+
+                <!-- Experience -->
+
+                <div class="filter-group">
+
+                    <h4>Experience Level</h4>
+
+                    <label>
+                        <input type="checkbox" class="experience-level" value="Entry Level">
+                        Entry Level
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="experience-level" value="Mid Level">
+                        Mid Level
+                    </label>
+
+                    <label>
+                        <input type="checkbox" class="experience-level" value="Senior Level">
+                        Senior Level
+                    </label>
+
+                </div>
+
+
+                <!-- Salary -->
+
+                <div class="filter-group">
+
+                    <h4>Salary Range</h4>
+
+                    <label>
+                        <input type="radio" name="salary" value="any" checked>
+                        Any Salary
+                    </label>
+
+                    <label>
+                        <input type="radio" name="salary" value="50">
+                        $50K+
+                    </label>
+
+                    <label>
+                        <input type="radio" name="salary" value="80">
+                        $80K+
+                    </label>
+
+                    <label>
+                        <input type="radio" name="salary" value="100">
+                        $100K+
+                    </label>
+
+                </div>
+
+
+            </aside>
+
+
+            <!-- ================= JOB LIST ================= -->
+
+            <main class="jobs-main">
+
+
+                <div class="jobs-topbar">
+
+                    <div>
+
+                        <h2>Available Jobs</h2>
+
+                        <p id="jobCount">
+                            Showing 18 job opportunities
+                        </p>
+
+                    </div>
+
+
+                    <select id="sortJobs" onchange="sortJobs()">
+
+                        <option value="latest">
+                            Sort: Latest
+                        </option>
+
+                        <option value="salary-high">
+                            Salary: High to Low
+                        </option>
+
+                        <option value="salary-low">
+                            Salary: Low to High
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- ================= JOB LISTINGS ================= -->
+
+                <div class="job-list" id="jobList">
+
+
+                    <!-- JOB 1 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Frontend Developer"
+                        data-company="NovaTech"
+                        data-location="Remote"
+                        data-type="Full Time"
+                        data-mode="Remote"
+                        data-experience="Mid Level"
+                        data-salary="120"
+                    >
+
+                        <div class="job-list-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqfhvSiTOveqoEI8HrVhoSigLlnYHmGSkefYk6y-zuWYomZ32UgqZN3zI&s=10" alt="Developer"></div>
+
+                        <div class="job-list-info">
+
+                            <div class="job-title-row">
+
+                                <div>
+
+                                    <h3>Frontend Developer</h3>
+
+                                    <p>NovaTech Solutions</p>
+
+                                </div>
+
+                                <span class="featured-badge">
+                                    Featured
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 Remote</span>
+                                <span>💼 Full Time</span>
+                                <span>💰 $80K - $120K</span>
+                                <span>📊 Mid Level</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Build modern and responsive web applications
+                                using HTML, CSS, JavaScript and React.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted Today
+                                </span>
+
+                                <a
+                                    href="job-details.html?job=Frontend%20Developer"
+                                    class="btn btn-primary btn-small"
+                                >
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 2 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="UI UX Designer"
+                        data-company="PixelCraft"
+                        data-location="New York"
+                        data-type="Full Time"
+                        data-mode="Hybrid"
+                        data-experience="Mid Level"
+                        data-salary="100"
+                    >
+
+                        <div class="job-list-logo"><img src="https://i.pinimg.com/736x/74/13/eb/7413eb389b7360e1c6f96a8114995989.jpg" alt="Designer"></div>
+
+                        <div class="job-list-info">
+
+                            <div class="job-title-row">
+
+                                <div>
+
+                                    <h3>UI/UX Designer</h3>
+
+                                    <p>PixelCraft Studio</p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 New York</span>
+                                <span>💼 Full Time</span>
+                                <span>🏢 Hybrid</span>
+                                <span>💰 $70K - $100K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Design beautiful and user-friendly digital
+                                experiences for web and mobile products.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 1 day ago
+                                </span>
+
+                                <a
+                                    href="job-details.html?job=UI%2FUX%20Designer"
+                                    class="btn btn-primary btn-small"
+                                >
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 3 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Backend Developer"
+                        data-company="CloudCore"
+                        data-location="San Francisco"
+                        data-type="Full Time"
+                        data-mode="Remote"
+                        data-experience="Senior Level"
+                        data-salary="125"
+                    >
+
+                        <div class="job-list-logo"><img src="https://media.licdn.com/dms/image/v2/C4E03AQEqdk6HVaAeJw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1606572396986?e=2147483647&v=beta&t=ED1fA5jS1-Lk3J97UD_oj9TcJpn7EyBqtFir_YhMY3I" alt="Developer"></div>
+
+                        <div class="job-list-info">
+
+                            <div class="job-title-row">
+
+                                <div>
+
+                                    <h3>Backend Developer</h3>
+
+                                    <p>CloudCore Technologies</p>
+
+                                </div>
+
+                                <span class="featured-badge">
+                                    Featured
+                                </span>
+
+                            </div>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 San Francisco</span>
+                                <span>💼 Full Time</span>
+                                <span>🌐 Remote</span>
+                                <span>💰 $95K - $125K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Develop scalable backend systems and APIs
+                                using Node.js, databases and cloud services.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted Today
+                                </span>
+
+                                <a
+                                    href="job-details.html?job=Backend%20Developer"
+                                    class="btn btn-primary btn-small"
+                                >
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 4 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Data Analyst"
+                        data-company="Insight Labs"
+                        data-location="Chicago"
+                        data-type="Full Time"
+                        data-mode="Hybrid"
+                        data-experience="Entry Level"
+                        data-salary="90"
+                    >
+
+                        <div class="job-list-logo"><img src="https://media.licdn.com/dms/image/v2/C4E0BAQHRenzZYaNO7A/company-logo_200_200/company-logo_200_200/0/1636132936592/insight_data_science_lab_logo?e=2147483647&v=beta&t=17lQvG9lDSarEM72m7TvDpiB_itW3he1yItY1pZw4bM" alt="Data Analyst"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>Data Analyst</h3>
+
+                            <p>Insight Labs</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 Chicago</span>
+                                <span>💼 Full Time</span>
+                                <span>🏢 Hybrid</span>
+                                <span>💰 $60K - $90K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Analyze business data, create reports and
+                                provide insights that support key decisions.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 2 days ago
+                                </span>
+
+                                <a href="job-details.html?job=Data%20Analyst"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 5 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Product Manager"
+                        data-company="NextGen"
+                        data-location="Boston"
+                        data-type="Full Time"
+                        data-mode="Hybrid"
+                        data-experience="Senior Level"
+                        data-salary="135"
+                    >
+
+                        <div class="job-list-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe_oO8SQQvszwWEdNEuBFeqcJhLsuSkjOd3DI0HE4xxaPg2mh3OAbCGrg&s=10" alt="Product Manager"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>Product Manager</h3>
+
+                            <p>NextGen Solutions</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 Boston</span>
+                                <span>💼 Full Time</span>
+                                <span>🏢 Hybrid</span>
+                                <span>💰 $90K - $135K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Lead product strategy and collaborate with
+                                design and engineering teams.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 2 days ago
+                                </span>
+
+                                <a href="job-details.html?job=Product%20Manager"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 6 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Graphic Designer"
+                        data-company="Creative House"
+                        data-location="Remote"
+                        data-type="Part Time"
+                        data-mode="Remote"
+                        data-experience="Mid Level"
+                        data-salary="70"
+                    >
+
+                        <div class="job-list-logo"><img src="https://img.magnific.com/free-vector/bird-colorful-gradient-design-vector_343694-2506.jpg?semt=ais_hybrid&w=740&q=80" alt="Graphic Design"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>Graphic Designer</h3>
+
+                            <p>Creative House</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 Remote</span>
+                                <span>💼 Part Time</span>
+                                <span>🎨 Remote</span>
+                                <span>💰 $45K - $70K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Create engaging visual designs for digital
+                                campaigns and brand identity projects.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 3 days ago
+                                </span>
+
+                                <a href="job-details.html?job=Graphic%20Designer"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 7 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Marketing Manager"
+                        data-company="BrightWave"
+                        data-location="Los Angeles"
+                        data-type="Full Time"
+                        data-mode="On Site"
+                        data-experience="Senior Level"
+                        data-salary="110"
+                    >
+
+                        <div class="job-list-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrK6JroHH9wbFzE5k9dtDr3Pj2XvJsQOOsqEo5uTL97A&s=10" alt="Marketing"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>Marketing Manager</h3>
+
+                            <p>BrightWave Media</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 Los Angeles</span>
+                                <span>💼 Full Time</span>
+                                <span>🏢 On Site</span>
+                                <span>💰 $75K - $110K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Lead marketing campaigns and develop strategies
+                                to grow brand awareness and engagement.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 3 days ago
+                                </span>
+
+                                <a href="job-details.html?job=Marketing%20Manager"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 8 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Software Engineer"
+                        data-company="TechSphere"
+                        data-location="Seattle"
+                        data-type="Full Time"
+                        data-mode="Remote"
+                        data-experience="Mid Level"
+                        data-salary="130"
+                    >
+
+                        <div class="job-list-logo"><img src="https://static.vecteezy.com/system/resources/thumbnails/040/867/353/small/gear-tch-logo-design-eps10-vector.jpg" alt="Software Engineer"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>Software Engineer</h3>
+
+                            <p>TechSphere</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 Seattle</span>
+                                <span>💼 Full Time</span>
+                                <span>🌐 Remote</span>
+                                <span>💰 $90K - $130K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Build reliable software products and work with
+                                modern technologies and cloud platforms.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 4 days ago
+                                </span>
+
+                                <a href="job-details.html?job=Software%20Engineer"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 9 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="HR Executive"
+                        data-company="People First"
+                        data-location="Dallas"
+                        data-type="Full Time"
+                        data-mode="On Site"
+                        data-experience="Mid Level"
+                        data-salary="75"
+                    >
+
+                        <div class="job-list-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbGmWSKoqFHA3Xqsi2RVned4gLt_bLFivxu85AddGnnHqsORRuf_iA-mw&s=10" alt="H Executive"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>HR Executive</h3>
+
+                            <p>People First Inc.</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 Dallas</span>
+                                <span>💼 Full Time</span>
+                                <span>🏢 On Site</span>
+                                <span>💰 $55K - $75K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Support recruitment, employee engagement and
+                                organizational development initiatives.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 4 days ago
+                                </span>
+
+                                <a href="job-details.html?job=HR%20Executive"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 10 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Financial Analyst"
+                        data-company="Capital Edge"
+                        data-location="New York"
+                        data-type="Full Time"
+                        data-mode="Hybrid"
+                        data-experience="Mid Level"
+                        data-salary="105"
+                    >
+
+                        <div class="job-list-logo"><img src="https://cdn-icons-png.flaticon.com/512/11934/11934188.png" alt="HR Executive"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>Financial Analyst</h3>
+
+                            <p>Capital Edge</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 New York</span>
+                                <span>💼 Full Time</span>
+                                <span>🏢 Hybrid</span>
+                                <span>💰 $75K - $105K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Analyze financial performance and prepare
+                                forecasts and reports for business teams.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 5 days ago
+                                </span>
+
+                                <a href="job-details.html?job=Financial%20Analyst"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 11 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Project Manager"
+                        data-company="BuildSmart"
+                        data-location="Austin"
+                        data-type="Full Time"
+                        data-mode="Hybrid"
+                        data-experience="Senior Level"
+                        data-salary="115"
+                    >
+
+                        <div class="job-list-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFKTIQOsTwK884XqCmsiZMx5ajYwTr0v1GOmsYyaN85tBHBeiXQyuPJ5k&s=10" alt="Project Manager"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>Project Manager</h3>
+
+                            <p>BuildSmart Group</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 Austin</span>
+                                <span>💼 Full Time</span>
+                                <span>🏢 Hybrid</span>
+                                <span>💰 $80K - $115K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Manage project timelines, teams and deliverables
+                                across multiple business initiatives.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 5 days ago
+                                </span>
+
+                                <a href="job-details.html?job=Project%20Manager"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 12 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Cybersecurity Analyst"
+                        data-company="SecureNet"
+                        data-location="Washington"
+                        data-type="Full Time"
+                        data-mode="Remote"
+                        data-experience="Senior Level"
+                        data-salary="140"
+                    >
+
+                        <div class="job-list-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS20tE2Uq28gNn-Um159emD7F1Au7uMx9T4dk0dGjT-EjeGDbX3ihToWo0&s=10" alt="Cybersecurity Analyst"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>Cybersecurity Analyst</h3>
+
+                            <p>SecureNet Systems</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 Washington</span>
+                                <span>💼 Full Time</span>
+                                <span>🌐 Remote</span>
+                                <span>💰 $100K - $140K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Monitor security systems and protect company
+                                infrastructure from cyber threats.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 6 days ago
+                                </span>
+
+                                <a href="job-details.html?job=Cybersecurity%20Analyst"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 13 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Mobile App Developer"
+                        data-company="AppVerse"
+                        data-location="Remote"
+                        data-type="Contract"
+                        data-mode="Remote"
+                        data-experience="Mid Level"
+                        data-salary="110"
+                    >
+
+                        <div class="job-list-logo"><img src="https://www.shutterstock.com/image-vector/mobile-developer-logo-app-software-260nw-1508460578.jpg" alt="Mobile App Developer"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>Mobile App Developer</h3>
+
+                            <p>AppVerse Technologies</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 Remote</span>
+                                <span>📄 Contract</span>
+                                <span>🌐 Remote</span>
+                                <span>💰 $80K - $110K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Develop high-quality mobile applications using
+                                modern Android and iOS technologies.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 1 week ago
+                                </span>
+
+                                <a href="job-details.html?job=Mobile%20App%20Developer"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 14 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Content Writer"
+                        data-company="WordCraft"
+                        data-location="Remote"
+                        data-type="Freelance"
+                        data-mode="Remote"
+                        data-experience="Entry Level"
+                        data-salary="60"
+                    >
+
+                        <div class="job-list-logo"><img src="https://static.vecteezy.com/system/resources/previews/035/675/390/non_2x/content-writing-logo-design-concept-with-documents-paper-and-pencil-publications-vector.jpg" alt="Content Writer"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>Content Writer</h3>
+
+                            <p>WordCraft Media</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 Remote</span>
+                                <span>✍ Freelance</span>
+                                <span>🌐 Remote</span>
+                                <span>💰 $40K - $60K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Write engaging content for websites, blogs and
+                                digital marketing campaigns.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 1 week ago
+                                </span>
+
+                                <a href="job-details.html?job=Content%20Writer"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 15 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Business Analyst"
+                        data-company="StrategyPro"
+                        data-location="Denver"
+                        data-type="Full Time"
+                        data-mode="Hybrid"
+                        data-experience="Mid Level"
+                        data-salary="100"
+                    >
+
+                        <div class="job-list-logo"><img src="https://www.shutterstock.com/image-photo/finance-business-investment-economy-growing-260nw-2516217779.jpg" alt="Business"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>Business Analyst</h3>
+
+                            <p>StrategyPro</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 Denver</span>
+                                <span>💼 Full Time</span>
+                                <span>🏢 Hybrid</span>
+                                <span>💰 $70K - $100K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Analyze business processes and identify
+                                opportunities for improvement and growth.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 8 days ago
+                                </span>
+
+                                <a href="job-details.html?job=Business%20Analyst"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 16 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="DevOps Engineer"
+                        data-company="DeployX"
+                        data-location="Remote"
+                        data-type="Full Time"
+                        data-mode="Remote"
+                        data-experience="Senior Level"
+                        data-salary="145"
+                    >
+
+                        <div class="job-list-logo"><img src="https://e7.pngegg.com/pngimages/887/314/png-clipart-devops-software-engineering-technology-engineer-blue-text.png" alt="DevOps Engineer"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>DevOps Engineer</h3>
+
+                            <p>DeployX Cloud</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 Remote</span>
+                                <span>💼 Full Time</span>
+                                <span>🌐 Remote</span>
+                                <span>💰 $105K - $145K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Manage cloud infrastructure and automate
+                                deployment pipelines for engineering teams.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 8 days ago
+                                </span>
+
+                                <a href="job-details.html?job=DevOps%20Engineer"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 17 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Machine Learning Engineer"
+                        data-company="AI Horizon"
+                        data-location="San Francisco"
+                        data-type="Full Time"
+                        data-mode="Hybrid"
+                        data-experience="Senior Level"
+                        data-salary="160"
+                    >
+
+                        <div class="job-list-logo"><img src="https://www.shutterstock.com/image-illustration/machine-learning-engineer-tech-concepta-260nw-2629112753.jpg" alt="Machine Learning Engineer"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>Machine Learning Engineer</h3>
+
+                            <p>AI Horizon</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 San Francisco</span>
+                                <span>💼 Full Time</span>
+                                <span>🏢 Hybrid</span>
+                                <span>💰 $120K - $160K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Build machine learning models and intelligent
+                                systems for real-world products.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 9 days ago
+                                </span>
+
+                                <a href="job-details.html?job=Machine%20Learning%20Engineer"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- JOB 18 -->
+
+                    <article
+                        class="job-list-card"
+                        data-title="Digital Marketing Specialist"
+                        data-company="Growth Hub"
+                        data-location="Miami"
+                        data-type="Full Time"
+                        data-mode="On Site"
+                        data-experience="Entry Level"
+                        data-salary="65"
+                    >
+
+                        <div class="job-list-logo"><img src="https://png.pngtree.com/png-vector/20250111/ourlarge/pngtree-marketing-specialist-3d-icon-with-dynamic-design-isolated-on-white-background-png-image_15140043.png" alt="Digital Marketing Specialist"></div>
+
+                        <div class="job-list-info">
+
+                            <h3>Digital Marketing Specialist</h3>
+
+                            <p>Growth Hub</p>
+
+
+                            <div class="job-meta">
+
+                                <span>📍 Miami</span>
+                                <span>💼 Full Time</span>
+                                <span>🏢 On Site</span>
+                                <span>💰 $45K - $65K</span>
+
+                            </div>
+
+
+                            <p class="job-description">
+                                Support digital advertising, social media and
+                                growth campaigns across multiple channels.
+                            </p>
+
+
+                            <div class="job-card-bottom">
+
+                                <span class="posted-date">
+                                    Posted 10 days ago
+                                </span>
+
+                                <a href="job-details.html?job=Digital%20Marketing%20Specialist"
+                                   class="btn btn-primary btn-small">
+                                    View Job
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+                <!-- NO RESULTS -->
+
+                <div class="no-results" id="noResults">
+
+                    <h3>No Jobs Found</h3>
+
+                    <p>
+                        Try changing your keywords or filters.
+                    </p>
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="clearFilters()"
+                    >
+                        Clear Filters
+                    </button>
+
+                </div>
+
+
+                <!-- PAGINATION -->
+
+                <div class="pagination">
+
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn">Next →</button>
+
+                </div>
+
+
+            </main>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <img
+                    src="Jobnest-logo.png"
+                    class="footer-logo"
+                    alt="JobNest Logo"
+                >
+
+                <p>
+                    Connecting talented people with meaningful opportunities
+                    and helping professionals build better futures.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>For Job Seekers</h3>
+
+                <a href="jobs.html">Browse Jobs</a>
+                <a href="categories.html">Job Categories</a>
+                <a href="about.html">Career Advice</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>For Employers</h3>
+
+                <a href="create-account.html">Post a Job</a>
+                <a href="jobs.html">Find Candidates</a>
+                <a href="signin.html">Employer Dashboard</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Company</h3>
+
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            © 2026 JobNest. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- Jobs JavaScript -->
+    <script src="script.js"></script>
+    <script src="jobs.js"></script>
+
+</body>
+
+</html>
