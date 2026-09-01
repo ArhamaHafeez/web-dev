@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Secure Bank | Register</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+body{
+    margin:0;
+    background:linear-gradient(135deg,#55246b,#2a2969);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:30px;
+}
+
+.register-box{
+    width:480px;
+    background:#fff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+.logo{
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.register-box h1{
+    text-align:center;
+    color:#512764;
+}
+
+.register-box h4{
+    text-align:center;
+    color:#030303;
+    margin-bottom:30px;
+}
+
+.input-box{
+    position:relative;
+    margin-bottom:20px;
+    box-sizing: border-box;
+}
+
+.input-box input{
+    width:100%;
+    padding:14px 30px 14px 15px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:15px;
+    outline:none;
+    box-sizing: border-box;
+}
+.input-box :hover{
+    background-color: #b5b9b9;
+}
+.input-box input:focus{
+    border-color:#512764;
+}
+
+.input-box i{
+    position:absolute;
+    right:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#777;
+}
+
+.password-toggle{
+    cursor:pointer;
+}
+
+#strength{
+    margin-top:-10px;
+    margin-bottom:15px;
+    font-size:14px;
+    font-weight:600;
+}
+
+.register-btn{
+    width:100%;
+    padding:14px;
+    background:#512764;
+    border:none;
+    color:#fff;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.register-btn:hover{
+    background:#40055c;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, #777);
+}
+
+.login-link{
+    text-align:center;
+    margin-top:20px;
+}
+
+.login-link a{
+    color:#512764;
+    font-weight:600;
+}
+
+@media(max-width:550px){
+
+.register-box{
+    width:100%;
+    padding:25px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="register-box">
+
+<div class="logo">
+<i class="fa-solid fa-building-columns"></i>
+<h1>Secure Bank</h1>
+</div>
+
+<h4>Create Your Banking Account</h4>
+
+<form id="registerForm">
+
+<div class="input-box">
+<input
+type="text"
+id="fullname"
+placeholder="Full Name"
+required>
+<i class="fa-solid fa-user"></i>
+</div>
+
+<div class="input-box">
+<input
+type="text"
+id="cnic"
+placeholder="National ID / CNIC"
+required>
+<i class="fa-solid fa-id-card"></i>
+</div>
+
+<div class="input-box">
+<input
+type="tel"
+id="phone"
+placeholder="Phone Number"
+required>
+<i class="fa-solid fa-phone"></i>
+</div>
+
+<div class="input-box">
+<input
+type="email"
+id="email"
+placeholder="Email Address"
+required>
+<i class="fa-solid fa-envelope"></i>
+</div>
+
+<div class="input-box">
+<input
+type="password"
+id="password"
+placeholder="Create Password"
+required>
+
+<i class="fa-solid fa-eye password-toggle"
+id="togglePassword"></i>
+
+</div>
+
+<div id="strength"></div>
+
+<div class="input-box">
+<input
+type="password"
+id="confirmPassword"
+placeholder="Confirm Password"
+required>
+</div>
+
+<button class="register-btn" type="submit">
+Create Account
+</button>
+
+</form>
+
+<div class="login-link">
+Already have an account?
+<a href="login.html">Login</a>
+</div>
+
+</div>
+
+<script>
+
+// Show Password
+
+const password=document.getElementById("password");
+const toggle=document.getElementById("togglePassword");
+
+toggle.onclick=function(){
+
+if(password.type==="password"){
+
+password.type="text";
+
+toggle.classList.replace("fa-eye","fa-eye-slash");
+
+}
+
+else{
+
+password.type="password";
+
+toggle.classList.replace("fa-eye-slash","fa-eye");
+
+}
+
+}
+
+// Password Strength
+
+const strength=document.getElementById("strength");
+
+password.addEventListener("keyup",()=>{
+
+let value=password.value;
+
+if(value.length<6){
+
+strength.innerHTML="Weak Password";
+strength.style.color="red";
+
+}
+
+else if(value.length<10){
+
+strength.innerHTML="Medium Password";
+strength.style.color="orange";
+
+}
+
+else{
+
+strength.innerHTML="Strong Password";
+strength.style.color="green";
+
+}
+
+});
+
+// Form Validation
+
+document.getElementById("registerForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const fullname=document.getElementById("fullname").value.trim();
+
+const cnic=document.getElementById("cnic").value.trim();
+
+const phone=document.getElementById("phone").value.trim();
+
+const email=document.getElementById("email").value.trim();
+
+const pass=document.getElementById("password").value;
+
+const confirm=document.getElementById("confirmPassword").value;
+
+if(fullname=="" || cnic=="" || phone=="" || email=="" || pass=="" || confirm==""){
+
+alert("Please fill all fields.");
+
+return;
+
+}
+
+if(pass!==confirm){
+
+alert("Passwords do not match.");
+
+return;
+
+}
+
+alert("Registration Successful!");
+
+window.location.href="login.html";
+
+});
+
+</script>
+
+</body>
+</html>

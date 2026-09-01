@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Secure Bank | Login</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+
+<style>
+
+/* Login Page Only */
+
+body{
+
+    background:linear-gradient(135deg,#55246b,#2a2969);
+
+    min-height:100vh;
+
+}
+
+/* Login Area */
+
+.login-area{
+
+    min-height:75vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:50px 20px;
+
+}
+
+
+/* Login Box */
+
+.login-container{
+
+    width:400px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(75,0,130,.15);
+
+}
+
+
+.login-container h1{
+
+    text-align:center;
+
+    color:#512764;
+
+    margin-bottom:10px;
+
+}
+
+
+.login-container p{
+
+    text-align:center;
+
+    color:#111111;
+
+    margin-bottom:25px;
+
+}
+
+
+.input-box{
+
+    margin-bottom:20px;
+
+}
+
+
+.input-box input{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    outline:none;
+    
+}
+.input-box :hover{
+   background-color: #b5b9b9;
+   border-color: #512764;
+}
+
+.input-box input:focus{
+
+    border-color:#512764;
+
+}
+
+
+.login-btn{
+
+    width:100%;
+
+    padding:14px;
+
+    background:#512764;
+
+    color:white;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+
+.login-btn:hover{
+
+    background:#40055c;
+
+}
+
+
+.signup-link{
+
+    text-align:center;
+
+    margin-top:20px;
+
+}
+
+
+.signup-link a{
+
+    color:#512764;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+
+<header>
+
+
+<div class="logo">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<h2>Secure Bank</h2>
+
+</div>
+
+
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+
+<li>
+<a href="login.html" class="active">Login</a>
+</li>
+
+
+<li>
+<a href="register.html">Sign Up</a>
+</li>
+
+
+<li>
+<a href="account.html">Account</a>
+</li>
+
+
+<li>
+<a href="transfer.html">Transfer</a>
+</li>
+
+
+<li>
+<a href="loans.html">Loans</a>
+</li>
+
+<li><a href="credit-card.html">Credit Card</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="security.html">Security</a></li>
+
+<li>
+<a href="contact.html">Contact</a>
+</li>
+<li>
+<a href="thankyou.html">Thank You</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+</header>
+
+
+
+<!-- ================= LOGIN FORM ================= -->
+
+
+<section class="login-area">
+
+
+<div class="login-container">
+
+
+<h1>Secure Bank</h1>
+
+<p>Login to your Secure Bank account</p>
+
+
+
+<form>
+
+
+<div class="input-box">
+
+<input 
+type="email"
+placeholder="Email Address"
+required>
+
+</div>
+
+
+
+<div class="input-box">
+
+<input
+type="password"
+placeholder="Password"
+required>
+
+</div>
+
+
+
+<button class="login-btn">
+
+Login
+
+</button>
+
+
+</form>
+
+
+
+<div class="signup-link">
+
+Don't have an account?
+
+<a href="register.html">
+Sign Up
+</a>
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer>
+
+<p>
+© 2026 Secure Bank | Secure Digital Banking
+</p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
