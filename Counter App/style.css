@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eeeeee;
+    font-family: Arial, sans-serif;
+}
+
+.counter-box {
+    width: 350px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+h1 {
+    color: #422b5e;
+}
+
+#count {
+    font-size: 60px;
+    margin: 25px;
+    color: #41106e;
+}
+
+button {
+    padding: 12px 18px;
+    margin: 5px;
+    border: none;
+    border-radius: 250px;
+    background-color: #490675;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: #555;
+}
+.increase{
+    background-color: rgb(10, 73, 10);
+}

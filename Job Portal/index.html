@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | JobNest</title>
+
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <!-- Logo -->
+            <a href="index.html">
+                <img src="Jobnest-logo.png" class="main-logo" alt="JobNest Logo">
+            </a>
+
+            <!-- Navigation -->
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="jobs.html">Find Jobs</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+               
+            </nav>
+
+            <!-- Header Buttons -->
+            <div class="nav-buttons">
+                <a class="btn btn-outline btn-small" href="signin.html">
+                    Sign In
+                </a>
+
+                <a class="btn btn-white btn-small" href="create-account.html">
+                    Create Account
+                </a>
+
+                <button class="menu-btn" onclick="toggleMenu()">
+                    ☰
+                </button>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO SECTION ================= -->
+
+    <section class="hero">
+
+        <div class="container hero-content">
+
+            <span class="eyebrow">
+                Your next opportunity is waiting
+            </span>
+
+            <h1>
+                Find The Job That
+                <span>Builds Your Future.</span>
+            </h1>
+
+            <p>
+                Discover meaningful career opportunities and connect with
+                leading companies. Your next professional journey starts
+                here with JobNest.
+            </p>
+
+
+            <!-- Search Box -->
+
+            <div class="search-box">
+
+                <div class="search-item">
+                    💼
+                    <input
+                        id="jobSearch"
+                        type="text"
+                        placeholder="Job title, skills or keywords"
+                    >
+                </div>
+
+
+                <div class="search-item">
+                    📍
+                    <input
+                        id="locationSearch"
+                        type="text"
+                        placeholder="City or location"
+                    >
+                </div>
+
+
+                <button class="search-btn" onclick="searchJobs()">
+                    Search Jobs
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= STATISTICS ================= -->
+
+    <section class="stats">
+
+        <div class="container stats-grid">
+
+            <div class="stat-card">
+                <h2>10K+</h2>
+                <p>Jobs Available</p>
+            </div>
+
+
+            <div class="stat-card">
+                <h2>5K+</h2>
+                <p>Top Companies</p>
+            </div>
+
+
+            <div class="stat-card">
+                <h2>20K+</h2>
+                <p>Job Seekers</p>
+            </div>
+
+
+            <div class="stat-card">
+                <h2>95%</h2>
+                <p>Success Rate</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= JOB CATEGORIES ================= -->
+
+    <section class="section section-white">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Explore Job Categories</h2>
+
+                <p>
+                    Find opportunities in the industries that match your
+                    skills and career goals.
+                </p>
+
+            </div>
+
+
+            <div class="category-grid">
+
+
+                <a class="category-card" href="jobs.html">
+
+                    <div class="category-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4Wx4gc5aD9xiCNPRirFGtQDhLeAN_ClX04eXSyQOSbRxLpxiCN1PU4Nqt&s=10" alt="Technology"></div>
+
+                    <h3>Technology</h3>
+
+                    <p>1,250 Jobs Available</p>
+
+                </a>
+
+
+                <a class="category-card" href="jobs.html">
+
+                    <div class="category-image"><img src="https://www.shutterstock.com/image-photo/finance-business-investment-economy-growing-260nw-2516217779.jpg" alt="Business"></div>
+
+                    <h3>Business</h3>
+
+                    <p>850 Jobs Available</p>
+
+                </a>
+
+
+                <a class="category-card" href="jobs.html">
+
+                    <div class="category-image"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrAb2AAJ2D0MSE1cVdd44-R9as_KmNbCN6hv3P5SbGYcR5xmr0u0NM6QZf&s=10" alt="Design"></div>
+
+                    <h3>Graphic Designer</h3>
+
+                    <p>620 Jobs Available</p>
+
+                </a>
+
+
+                <a class="category-card" href="jobs.html">
+
+                    <div class="category-image"><img src="https://t4.ftcdn.net/jpg/06/12/22/29/360_F_612222999_7nT8JXjdVkJMOdRHLBhQBqTvV8flOEJO.jpg" alt="Marketing"></div>                    
+
+                    <h3>Marketing</h3>
+
+                    <p>740 Jobs Available</p>
+
+                </a>
+
+
+                <a class="category-card" href="jobs.html">
+
+                    <div class="category-image"><img src="https://arizonacollege.edu/wp-content/uploads/2025/08/Medical-Technology-Blog.jpg" alt="Healthcare"></div>
+
+                    <h3>Healthcare</h3>
+
+                    <p>540 Jobs Available</p>
+
+                </a>
+
+
+                <a class="category-card" href="jobs.html">
+
+                    <div class="category-image"><img src="https://img.magnific.com/premium-photo/open-book-with-abstract-business-illustration_488220-70967.jpg?semt=ais_hybrid&w=740&q=80" alt="Education"></div>
+
+                    <h3>Education</h3>
+
+                    <p>430 Jobs Available</p>
+
+                </a>
+
+
+                <a class="category-card" href="jobs.html">
+
+                    <div class="category-image"><img src="https://newportllc.com/wp-content/uploads/2023/05/Finance-the-Growth-of-Your-Business-in-a-Challenging-Financial-World.jpg" alt="Finance"></div>
+
+                    <h3>Finance</h3>
+
+                    <p>390 Jobs Available</p>
+
+                </a>
+
+
+                <a class="category-card" href="jobs.html">
+
+                    <div class="category-image"><img src="https://img.magnific.com/premium-photo/construction-worker-with-cityscape-overlay_332713-17217.jpg?semt=ais_hybrid&w=740&q=80" alt="Engineering"></div>
+
+                    <h3>Engineering</h3>
+
+                    <p>680 Jobs Available</p>
+
+                </a>
+
+
+            </div>
+
+
+            <div class="view-all">
+
+                <a class="btn btn-primary" href="categories.html">
+                    View All Categories
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURED JOBS ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <h2>Featured Jobs</h2>
+
+                <p>
+                    Explore exciting opportunities from leading companies.
+                </p>
+
+            </div>
+
+
+            <div class="jobs-grid">
+
+
+                <!-- Job 1 -->
+
+                <div class="job-card">
+
+                    <div class="job-top">
+
+                        <div class="company-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqfhvSiTOveqoEI8HrVhoSigLlnYHmGSkefYk6y-zuWYomZ32UgqZN3zI&s=10" alt="Developer"></div>
+
+                        <div>
+                            <h3>Frontend Developer</h3>
+                            <p class="company">NovaTech</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="job-details">
+
+                        <span class="tag">Full Time</span>
+                        <span class="tag">Remote</span>
+                        <span class="tag">$80K - $120K</span>
+
+                    </div>
+
+
+                    <div class="job-footer">
+
+                        <span>Posted 2 days ago</span>
+
+                        <a
+                            class="btn btn-primary btn-small"
+                            href="job-details.html?job=Frontend%20Developer"
+                        >
+                            Apply Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Job 2 -->
+
+                <div class="job-card">
+
+                    <div class="job-top">
+
+                        <div class="company-logo"><img src="https://i.pinimg.com/736x/74/13/eb/7413eb389b7360e1c6f96a8114995989.jpg" alt="Designer"></div>
+
+                        <div>
+                            <h3>UI/UX Designer</h3>
+                            <p class="company">PixelCraft</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="job-details">
+
+                        <span class="tag">Full Time</span>
+                        <span class="tag">Hybrid</span>
+                        <span class="tag">$70K - $100K</span>
+
+                    </div>
+
+
+                    <div class="job-footer">
+
+                        <span>Posted 1 day ago</span>
+
+                        <a
+                            class="btn btn-primary btn-small"
+                            href="job-details.html?job=UI/UX%20Designer"
+                        >
+                            Apply Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Job 3 -->
+
+                <div class="job-card">
+
+                    <div class="job-top">
+
+                        <div class="company-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrK6JroHH9wbFzE5k9dtDr3Pj2XvJsQOOsqEo5uTL97A&s=10" alt="Marketing"></div>
+
+                        <div>
+                            <h3>Marketing Manager</h3>
+                            <p class="company">BrightWave</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="job-details">
+
+                        <span class="tag">Full Time</span>
+                        <span class="tag">On Site</span>
+                        <span class="tag">$65K - $90K</span>
+
+                    </div>
+
+
+                    <div class="job-footer">
+
+                        <span>Posted 3 days ago</span>
+
+                        <a
+                            class="btn btn-primary btn-small"
+                            href="job-details.html?job=Marketing%20Manager"
+                        >
+                            Apply Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Job 4 -->
+
+                <div class="job-card">
+
+                    <div class="job-top">
+
+                        <div class="company-logo"><img src="https://media.licdn.com/dms/image/v2/C4E03AQEqdk6HVaAeJw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1606572396986?e=2147483647&v=beta&t=ED1fA5jS1-Lk3J97UD_oj9TcJpn7EyBqtFir_YhMY3I" alt="Developer"></div>
+
+                        <div>
+                            <h3>Backend Developer</h3>
+                            <p class="company">CloudCore</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="job-details">
+
+                        <span class="tag">Full Time</span>
+                        <span class="tag">Remote</span>
+                        <span class="tag">$85K - $125K</span>
+
+                    </div>
+
+
+                    <div class="job-footer">
+
+                        <span>Posted Today</span>
+
+                        <a
+                            class="btn btn-primary btn-small"
+                            href="job-details.html?job=Backend%20Developer"
+                        >
+                            Apply Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Job 5 -->
+
+                <div class="job-card">
+
+                    <div class="job-top">
+
+                        <div class="company-logo"><img src="https://media.licdn.com/dms/image/v2/C4E0BAQHRenzZYaNO7A/company-logo_200_200/company-logo_200_200/0/1636132936592/insight_data_science_lab_logo?e=2147483647&v=beta&t=17lQvG9lDSarEM72m7TvDpiB_itW3he1yItY1pZw4bM" alt="Data Analyst"></div>
+
+                        <div>
+                            <h3>Data Analyst</h3>
+                            <p class="company">Insight Labs</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="job-details">
+
+                        <span class="tag">Full Time</span>
+                        <span class="tag">Hybrid</span>
+                        <span class="tag">$60K - $95K</span>
+
+                    </div>
+
+
+                    <div class="job-footer">
+
+                        <span>Posted Today</span>
+
+                        <a
+                            class="btn btn-primary btn-small"
+                            href="job-details.html?job=Data%20Analyst"
+                        >
+                            Apply Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Job 6 -->
+
+                <div class="job-card">
+
+                    <div class="job-top">
+
+                        <div class="company-logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe_oO8SQQvszwWEdNEuBFeqcJhLsuSkjOd3DI0HE4xxaPg2mh3OAbCGrg&s=10" alt="Product Manager"></div>
+
+                        <div>
+                            <h3>Product Manager</h3>
+                            <p class="company">NextGen Solutions</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="job-details">
+
+                        <span class="tag">Full Time</span>
+                        <span class="tag">Hybrid</span>
+                        <span class="tag">$90K - $135K</span>
+
+                    </div>
+
+
+                    <div class="job-footer">
+
+                        <span>Posted 2 days ago</span>
+
+                        <a
+                            class="btn btn-primary btn-small"
+                            href="job-details.html?job=Product%20Manager"
+                        >
+                            Apply Now
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="view-all">
+
+                <a class="btn btn-primary" href="jobs.html">
+                    Browse All Jobs
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT PREVIEW ================= -->
+
+    <section class="section section-white">
+
+        <div class="container about-grid">
+
+
+            <img
+                class="about-img"
+                src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1000&q=85"
+                alt="Professional team"
+            >
+
+
+            <div class="about-content">
+
+                <h2>
+                    Your Career Journey Starts With JobNest
+                </h2>
+
+                <p>
+                    JobNest connects talented professionals with the right
+                    opportunities and companies with the right people.
+                </p>
+
+
+                <ul class="check-list">
+
+                    <li>Thousands of verified opportunities</li>
+
+                    <li>Connect directly with top companies</li>
+
+                    <li>Simple and fast application process</li>
+
+                    <li>Build your professional career profile</li>
+
+                </ul>
+
+
+                <a class="btn btn-primary" href="about.html">
+                    Learn More About Us
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CALL TO ACTION ================= -->
+
+    <section class="section">
+
+        <div class="container cta-box">
+
+            <h2>Ready To Build Your Future?</h2>
+
+            <p>
+                Join JobNest today and discover career opportunities
+                that match your skills, ambitions and goals.
+            </p>
+
+            <a class="btn btn-white" href="create-account.html">
+                Create Free Account
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+
+            <!-- Footer Brand -->
+
+            <div>
+
+                <img
+                    src="Jobnest-logo.png"
+                    class="footer-logo"
+                    alt="JobNest Logo"
+                >
+
+                <p>
+                    Connecting talented people with meaningful opportunities
+                    and helping professionals build better futures.
+                </p>
+
+            </div>
+
+
+            <!-- Job Seekers -->
+
+            <div>
+
+                <h3>For Job Seekers</h3>
+
+                <a href="jobs.html">Browse Jobs</a>
+
+                <a href="categories.html">Job Categories</a>
+
+                <a href="about.html">Career Advice</a>
+
+            </div>
+
+
+            <!-- Employers -->
+
+            <div>
+
+                <h3>For Employers</h3>
+
+                <a href="create-account.html">Post a Job</a>
+
+                <a href="jobs.html">Find Candidates</a>
+
+                <a href="signin.html">Employer Dashboard</a>
+
+            </div>
+
+
+            <!-- Company -->
+
+            <div>
+
+                <h3>Company</h3>
+
+                <a href="about.html">About Us</a>
+
+                <a href="contact.html">Contact Us</a>
+
+                <a href="privacy.html">Privacy Policy</a>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- Copyright -->
+
+        <div class="container footer-bottom">
+
+            © 2026 JobNest. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- Main JavaScript File -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

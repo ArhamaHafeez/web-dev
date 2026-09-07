@@ -1,0 +1,1358 @@
+/* Google Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+background:#ffffff;
+color:#333;
+}
+
+/* Header */
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#fff;
+box-shadow:0 3px 15px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+}
+
+.logo i{
+
+font-size:32px;
+color:#6A0DAD;
+
+}
+
+.logo h2{
+
+color:#4B0082;
+
+}
+
+nav ul{
+
+display:flex;
+list-style:none;
+gap:28px;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:#333;
+font-weight:500;
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#6A0DAD;
+
+}
+
+.active{
+
+color:#6A0DAD;
+font-weight:bold;
+
+}
+
+/* Hero */
+
+.hero{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:70px 8%;
+gap:50px;
+
+}
+
+.hero-text{
+
+flex:1;
+
+}
+
+.hero-text h1{
+
+font-size:55px;
+color:#4B0082;
+margin-bottom:20px;
+
+}
+
+.hero-text p{
+
+font-size:18px;
+line-height:1.8;
+margin-bottom:30px;
+color:#666;
+
+}
+
+.btn{
+
+display:inline-block;
+background:#6A0DAD;
+padding:14px 35px;
+color:white;
+text-decoration:none;
+border-radius:30px;
+transition:.3s;
+
+}
+
+.btn:hover{
+
+background:#4B0082;
+
+}
+
+.hero-image{
+
+flex:1;
+text-align:center;
+
+}
+
+.hero-image img{
+
+width:100%;
+max-width:550px;
+border-radius:20px;
+box-shadow:0 15px 30px rgba(0,0,0,.2);
+
+}
+
+/* Services */
+
+.features{
+
+padding:80px 8%;
+background:#f8f5ff;
+text-align:center;
+
+}
+
+.features h2{
+
+font-size:40px;
+margin-bottom:40px;
+color:#4B0082;
+
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:white;
+padding:35px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.card i{
+
+font-size:45px;
+color:#6A0DAD;
+margin-bottom:20px;
+
+}
+
+.card h3{
+
+margin-bottom:15px;
+
+}
+
+.card p{
+
+color:#666;
+
+}
+
+/* Stats */
+
+.stats{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+padding:70px 8%;
+background:linear-gradient(135deg,#4B0082,#6A0DAD);
+color:white;
+text-align:center;
+
+}
+
+.stat h1{
+
+font-size:50px;
+
+}
+
+.stat p{
+
+font-size:18px;
+
+}
+
+/* Footer */
+
+footer{
+
+background:#2D0052;
+color:white;
+text-align:center;
+padding:25px;
+
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+gap:20px;
+
+}
+
+nav ul{
+
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.hero{
+
+flex-direction:column;
+text-align:center;
+
+}
+
+.hero-text h1{
+
+font-size:40px;
+
+}
+
+}
+/* =====================================
+        MONEY TRANSFER PAGE
+   ===================================== */
+
+
+/* Transfer Hero */
+
+.transfer-hero{
+
+    background:linear-gradient(135deg,#55246b,#2a2969);
+
+    color:white;
+
+    text-align:center;
+
+    padding:70px 20px;
+
+}
+
+
+.transfer-hero h1{
+
+    font-size:45px;
+
+    margin-bottom:15px;
+
+}
+
+
+.transfer-hero p{
+
+    font-size:18px;
+
+    opacity:.9;
+
+}
+
+
+
+/* Transfer Section */
+
+.transfer-section{
+
+    padding:70px 8%;
+
+    background:#f8f5ff;
+
+}
+
+
+.transfer-box{
+
+    max-width:650px;
+
+    margin:auto;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(75,0,130,.15);
+
+}
+
+
+.transfer-box h2{
+
+    text-align:center;
+
+    color:#4B0082;
+
+    margin-bottom:30px;
+
+    font-size:32px;
+
+}
+
+
+
+/* Input Fields */
+
+.input-group{
+
+    margin-bottom:20px;
+
+}
+
+
+.input-group label{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#4B0082;
+
+    font-weight:600;
+
+}
+
+
+.input-group input,
+.input-group textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+.input-group textarea:hover{
+    background-color: #b5b9b9;
+}
+.input-group input:focus,
+.input-group textarea:focus{
+
+    border-color:#6A0DAD;
+
+    box-shadow:0 0 8px rgba(106,13,173,.2);
+
+}
+.input-group input :hover{
+    background-color: #b2b9b9;
+}
+
+/* Transfer Button */
+
+.transfer-box .btn{
+
+    width:100%;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+.transfer-box .btn :hover{
+    background: #40055c;
+    transform: translateY(-8px);
+}
+
+
+/* History Section */
+
+.history{
+
+    padding:70px 8%;
+
+    background:white;
+
+}
+
+
+.history h2{
+
+    text-align:center;
+
+    color:#4B0082;
+
+    font-size:35px;
+
+    margin-bottom:35px;
+
+}
+
+
+
+/* Table */
+
+.history table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+
+.history th{
+
+    background:#6A0DAD;
+
+    color:white;
+
+    padding:16px;
+
+    text-align:center;
+
+}
+
+
+.history td{
+
+    padding:15px;
+
+    text-align:center;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+.history tr:hover{
+
+    background:#f8f5ff;
+
+}
+
+
+
+/* Status Colors */
+
+.success{
+
+    color:green;
+
+    font-weight:600;
+
+}
+
+
+.pending{
+
+    color:#d68b00;
+
+    font-weight:600;
+
+}
+
+
+
+/* Footer */
+
+footer{
+
+    background:#2D0052;
+
+    color:white;
+
+    text-align:center;
+
+    padding:25px;
+
+}
+
+
+
+/* Responsive Design */
+
+@media(max-width:768px){
+
+
+    .transfer-hero h1{
+
+        font-size:32px;
+
+    }
+
+
+    .transfer-box{
+
+        padding:25px;
+
+    }
+
+
+    .history{
+
+        overflow-x:auto;
+
+    }
+
+
+    .history table{
+
+        min-width:600px;
+
+    }
+
+}
+/* ================= CREDIT CARD PAGE ================= */
+
+
+.credit-hero{
+
+background:linear-gradient(#55246b,#2a2969);
+color:white;
+text-align:center;
+padding:70px 20px;
+
+}
+
+
+.credit-hero h1{
+
+font-size:45px;
+
+}
+
+
+
+.credit-section{
+
+padding:70px 8%;
+background:#f8f5ff;
+
+}
+
+
+.credit-section h2,
+.benefits h2{
+
+text-align:center;
+color:#512764;
+margin-bottom:40px;
+
+}
+
+
+
+.credit-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+gap:30px;
+
+}
+
+.credit-card{
+
+height:250px;
+padding:30px;
+border-radius:20px;
+color:white;
+box-shadow:0 15px 30px rgba(0,0,0,.2);
+
+}
+
+.credit-card i{
+
+font-size:40px;
+
+}
+
+
+.credit-card h3{
+
+margin-top:25px;
+font-size:25px;
+
+}
+.credit-card h3 :hover{
+    transform: translateY(-5px);
+}
+
+.credit-card h4{
+
+margin-top:30px;
+letter-spacing:3px;
+
+}
+
+
+.purple{
+
+background:linear-gradient(135deg,#4B0082,#9B59B6);
+
+}
+
+
+.gold{
+
+background:linear-gradient(135deg,#b8860b,#ffd700);
+
+}
+
+
+.black{
+
+background:linear-gradient(135deg,#111,#444);
+
+}
+
+
+
+/* Benefits */
+
+
+.benefits{
+
+padding:60px 8%;
+background:white;
+
+}
+
+
+.benefit-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+
+}
+
+
+.benefit-box{
+
+background:#f8f5ff;
+padding:25px;
+text-align:center;
+border-radius:15px;
+
+}
+
+
+.benefit-box i{
+
+font-size:35px;
+color:#512764;
+
+}
+
+
+
+
+/* Apply */
+
+.apply-card{
+
+padding:60px 8%;
+background:#f8f5ff;
+
+}
+
+
+.apply-box{
+
+max-width:600px;
+margin:auto;
+background:white;
+padding:35px;
+border-radius:20px;
+
+}
+
+
+.apply-box input,
+.apply-box select{
+
+width:100%;
+padding:14px;
+margin:10px 0;
+border-radius:10px;
+border:1px solid #ccc;
+
+}
+.apply-box input:hover{ 
+    background-color: #c7c1c1;
+    border-color: #55246b;
+}
+
+
+.apply-box button{
+
+width:100%;
+padding:14px;
+background:#6A0DAD;
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
+
+}
+.apply-box button :hover{
+    background-color: #40055c;
+    transform: translateY(-5px);
+}
+/* ================= SERVICES PAGE ================= */
+
+
+.service-hero{
+
+background:linear-gradient(135deg,#55246b,#2a2969);
+color:white;
+text-align:center;
+padding:70px 20px;
+
+}
+
+
+.service-hero h1{
+
+font-size:45px;
+
+}
+
+
+
+.services-section{
+
+padding:70px 8%;
+background:#f8f5ff;
+
+}
+
+
+.services-section h2{
+
+text-align:center;
+color:#4B0082;
+margin-bottom:40px;
+
+}
+
+
+
+.service-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+
+}
+
+
+
+.service-card{
+
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+transition:.3s;
+
+}
+
+
+.service-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+.service-card i{
+
+font-size:45px;
+color:#6A0DAD;
+margin-bottom:20px;
+
+}
+
+
+.service-card h3{
+
+color:#4B0082;
+
+}
+
+
+.service-card a{
+
+color:#6A0DAD;
+text-decoration:none;
+font-weight:bold;
+
+}
+
+
+
+
+/* Digital Banking */
+
+
+.digital-section{
+
+padding:70px 8%;
+background:white;
+
+}
+
+
+.digital-box{
+
+display:flex;
+align-items:center;
+gap:40px;
+background:#f8f5ff;
+padding:40px;
+border-radius:20px;
+
+}
+.digital-section :hover{
+    transform: translateY(-8px);
+}
+
+.digital-box i{
+
+font-size:70px;
+color:#6A0DAD;
+
+}
+
+
+.digital-box h2{
+
+color:#4B0082;
+
+}
+
+
+.digital-box button{
+
+background:#6A0DAD;
+color:white;
+border:none;
+padding:12px 30px;
+border-radius:30px;
+
+}
+
+
+
+
+/* Support */
+
+
+.support-section{
+
+padding:60px 8%;
+background:#f8f5ff;
+text-align:center;
+
+}
+
+.support-section h2{
+
+color:#4B0082;
+
+}
+
+
+.support-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:35px;
+
+}
+.support-container :hover{
+    transform: translateY(-8px);
+}
+
+
+.support-container div{
+
+background:white;
+padding:25px;
+border-radius:15px;
+
+}
+
+
+.support-container i{
+
+font-size:35px;
+color:#6A0DAD;
+
+}
+/* ================= SECURITY PAGE ================= */
+
+
+.security-hero{
+
+background:linear-gradient(135deg,#55246b,#2a2969);
+color:white;
+text-align:center;
+padding:70px 20px;
+
+}
+
+.security-hero h1{
+
+font-size:45px;
+
+}
+
+
+
+.security-section{
+
+padding:70px 8%;
+background:#f8f5ff;
+
+}
+
+
+.security-section h2,
+.tips-section h2{
+
+text-align:center;
+color:#4B0082;
+margin-bottom:40px;
+
+}
+
+
+
+.security-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+}
+.security-container :hover{
+    transform: translateY(-8px);
+}
+
+
+.security-card{
+
+background:white;
+padding:35px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+.security-card i{
+
+font-size:45px;
+color:#6A0DAD;
+margin-bottom:20px;
+
+}
+
+
+
+.security-card h3{
+
+color:#4B0082;
+
+}
+
+
+
+
+
+/* Fraud Section */
+
+
+.fraud-section{
+
+padding:70px 8%;
+background:white;
+
+}
+.fraud-section :hover{
+    transform: translateY(-8px);
+}
+
+.fraud-box{
+
+display:flex;
+align-items:center;
+gap:30px;
+background:#f8f5ff;
+padding:40px;
+border-radius:20px;
+
+}
+
+.fraud-box i{
+
+font-size:60px;
+color:#6A0DAD;
+
+}
+
+
+.fraud-box h2{
+
+color:#4B0082;
+
+}
+
+
+.fraud-box button{
+
+background:#6A0DAD;
+color:white;
+border:none;
+padding:12px 30px;
+border-radius:30px;
+
+}
+
+.fraud-box button{
+    background-color: #512764;
+}
+
+
+
+/* Tips */
+
+
+.tips-section{
+
+padding:60px 8%;
+background:#f8f5ff;
+
+}
+
+
+
+.tips-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+
+}
+.tips-container :hover{
+    transform: translateY(-8px);
+}
+
+
+.tip{
+
+background:white;
+padding:25px;
+text-align:center;
+border-radius:15px;
+
+}
+
+
+
+.tip i{
+
+font-size:35px;
+color:#6A0DAD;
+
+}
+
+
+.tip h3{
+
+color:#4B0082;
+
+}
+/* ================= CONTACT PAGE ================= */
+
+
+.contact-hero{
+
+background:linear-gradient(135deg,#55246b,#2a2969);
+color:white;
+text-align:center;
+padding:70px 20px;
+
+}
+
+
+.contact-hero h1{
+
+font-size:45px;
+
+}
+
+
+
+
+.contact-section{
+
+padding:70px 8%;
+background:#f8f5ff;
+
+}
+
+.contact-section h2,
+.help-section h2{
+
+text-align:center;
+color:#4B0082;
+margin-bottom:40px;
+
+}
+
+
+
+.contact-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+
+}
+.contact-container :hover{
+    transform: translateY(-8px);
+}
+
+
+.contact-card{
+
+background:white;
+padding:30px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+
+
+.contact-card i{
+
+font-size:40px;
+color:#6A0DAD;
+margin-bottom:15px;
+
+}
+
+
+.contact-card h3{
+
+color:#4B0082;
+
+}
+
+
+
+
+
+/* Message Form */
+
+
+.message-section{
+
+padding:70px 8%;
+background:white;
+
+}
+
+
+.message-box{
+
+max-width:600px;
+margin:auto;
+background:#f8f5ff;
+padding:35px;
+border-radius:20px;
+
+}
+.message-box textarea :hover{
+    background-color: #aca7a7;
+    border-color: #55246b;
+}
+
+.message-box h2{
+
+text-align:center;
+color:#4B0082;
+
+}
+
+
+
+.message-box input,
+.message-box textarea{
+
+width:100%;
+padding:14px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:10px;
+
+}
+
+.message-box button{
+
+width:100%;
+padding:14px;
+background:#6A0DAD;
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
+
+}
+
+
+.message-box button:hover{
+
+background:#4B0082;
+transform: translateY(-8px);
+
+}
+
+
+
+
+
+/* Help Section */
+
+
+.help-section{
+
+padding:60px 8%;
+background:#f8f5ff;
+text-align:center;
+
+}
+
+
+
+.help-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+
+}
+.help-container :hover {
+    transform: translateY(-8px);
+}
+
+
+.help-container div{
+
+background:white;
+padding:25px;
+border-radius:15px;
+
+}
+
+
+
+.help-container i{
+
+font-size:35px;
+color:#6A0DAD;
+
+}
+
+
+.help-container h3{
+
+color:#4B0082;
+
+}

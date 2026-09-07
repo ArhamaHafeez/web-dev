@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Secure Bank | Account Dashboard</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+    background-color: #55246b #2a2969;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f7f5fc;
+}
+
+/* Navbar */
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#fff;
+box-shadow:0 3px 15px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:1000;
+
+}
+
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+color:#512764;
+font-size:22px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+nav a:hover,
+nav .active{
+color:#40055c;
+}
+
+/* Welcome */
+
+.welcome{
+margin:40px 8%;
+background:linear-gradient(135deg,#512764,#40055c);
+color:white;
+padding:40px;
+border-radius:15px;
+}
+
+.welcome h1{
+font-size:35px;
+margin-bottom:10px;
+}
+
+/* Cards */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:0 8%;
+margin-top:35px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card i{
+font-size:40px;
+color:#40055c;
+margin-bottom:15px;
+}
+
+.card h2{
+color:#512764;
+margin-bottom:10px;
+}
+
+.card p{
+color:#666;
+}
+
+/* Profile */
+
+.profile{
+display:grid;
+grid-template-columns:1fr 2fr;
+gap:30px;
+padding:50px 8%;
+}
+
+.profile-card{
+
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+text-align:center;
+
+}
+
+.profile-card img{
+
+width:120px;
+height:120px;
+border-radius:50%;
+margin-bottom:20px;
+
+}
+
+.profile-card h2{
+
+color:#512764;
+
+}
+
+.profile-card p{
+
+color:#666;
+margin:8px 0;
+
+}
+
+/* Details */
+
+.details{
+
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+.details h2{
+
+color:#40055c;
+margin-bottom:20px;
+
+}
+
+.info{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+
+}
+
+.info div{
+
+background:#f5efff;
+padding:15px;
+border-radius:10px;
+
+}
+
+.info span{
+
+display:block;
+color:#777;
+font-size:14px;
+
+}
+
+.info strong{
+
+font-size:18px;
+color:#333;
+
+}
+
+/* Transactions */
+
+.transactions{
+
+padding:20px 8% 60px;
+
+}
+
+.transactions h2{
+
+color:#4b0082;
+margin-bottom:20px;
+
+}
+
+table{
+
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+}
+
+table th{
+
+background:#512764;
+color:white;
+padding:15px;
+
+}
+
+table td{
+
+padding:15px;
+text-align:center;
+border-bottom:1px solid #eee;
+
+}
+
+.credit{
+
+color:green;
+font-weight:bold;
+
+}
+
+.debit{
+
+color:red;
+font-weight:bold;
+
+}
+
+/* Buttons */
+
+.actions{
+
+margin-top:30px;
+display:flex;
+gap:15px;
+
+}
+
+.actions button{
+
+padding:12px 25px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+background:#512764;
+color:white;
+font-size:15px;
+transition:.3s;
+
+}
+
+.actions button:hover{
+
+background:#40055c;
+
+}
+
+/* Footer */
+
+footer{
+
+background:#2b004d;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:50px;
+
+}
+
+@media(max-width:900px){
+
+.profile{
+
+grid-template-columns:1fr;
+
+}
+
+.info{
+
+grid-template-columns:1fr;
+
+}
+
+.actions{
+
+flex-direction:column;
+
+}
+
+table{
+
+display:block;
+overflow-x:auto;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+
+<div class="logo">
+
+<i class="fa-solid fa-building-columns"></i>
+
+<h2>Secure Bank</h2>
+
+</div>
+
+
+
+<nav>
+
+<ul>
+
+<li>
+<a href="index.html">Home</a>
+</li>
+
+
+<li>
+<a href="login.html" class="active">Login</a>
+</li>
+
+
+<li>
+<a href="register.html">Sign Up</a>
+</li>
+
+
+<li>
+<a href="account.html">Account</a>
+</li>
+
+
+<li>
+<a href="transfer.html">Transfer</a>
+</li>
+
+
+<li>
+<a href="loans.html">Loans</a>
+</li>
+
+<li><a href="credit-card.html">Credit Card</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="security.html">Security</a></li>
+
+
+<li>
+<a href="contact.html">Contact</a>
+</li>
+<li>
+    <a href="thankyou.html">Thank You</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+</header>
+
+
+<section class="welcome">
+
+<h1>Welcome John!</h1>
+
+<p>Manage your finances securely and efficiently.</p>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-wallet"></i>
+
+<h2>$12,450.80</h2>
+
+<p>Available Balance</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-money-bill-transfer"></i>
+
+<h2>$3,450</h2>
+
+<p>Monthly Income</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-credit-card"></i>
+
+<h2>$1,260</h2>
+
+<p>Monthly Expenses</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-piggy-bank"></i>
+
+<h2>$25,000</h2>
+
+<p>Total Savings</p>
+
+</div>
+
+</section>
+
+<section class="profile">
+
+<div class="profile-card">
+
+<img src="https://randomuser.me/api/portraits/men/45.jpg">
+
+<h2>John Anderson</h2>
+
+<p>Premium Customer</p>
+
+<p>Customer ID: 1024587</p>
+
+<div class="actions">
+
+<button>Transfer</button>
+
+<button>Deposit</button>
+
+</div>
+
+</div>
+
+<div class="details">
+
+<h2>Account Details</h2>
+
+<div class="info">
+
+<div>
+
+<span>Account Number</span>
+
+<strong>987654321012</strong>
+
+</div>
+
+<div>
+
+<span>Account Type</span>
+
+<strong>Current Account</strong>
+
+</div>
+
+<div>
+
+<span>Branch</span>
+
+<strong>Downtown Branch</strong>
+
+</div>
+
+<div>
+
+<span>IFSC/SWIFT</span>
+
+<strong>SBIN000987</strong>
+
+</div>
+
+<div>
+
+<span>Email</span>
+
+<strong>john@email.com</strong>
+
+</div>
+
+<div>
+
+<span>Phone</span>
+
+<strong>+1 987 654 3210</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="transactions">
+
+<h2>Recent Transactions</h2>
+
+<table>
+
+<tr>
+
+<th>Date</th>
+
+<th>Description</th>
+
+<th>Amount</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>03 Aug 2026</td>
+
+<td>Salary Credit</td>
+
+<td class="credit">+$3,450</td>
+
+<td>Completed</td>
+
+</tr>
+
+<tr>
+
+<td>02 Aug 2026</td>
+
+<td>Electric Bill</td>
+
+<td class="debit">-$120</td>
+
+<td>Completed</td>
+
+</tr>
+
+<tr>
+
+<td>01 Aug 2026</td>
+
+<td>ATM Withdrawal</td>
+
+<td class="debit">-$200</td>
+
+<td>Completed</td>
+
+</tr>
+
+<tr>
+
+<td>30 Jul 2026</td>
+
+<td>Transfer Received</td>
+
+<td class="credit">+$500</td>
+
+<td>Completed</td>
+
+</tr>
+
+</table>
+
+</section>
+
+<footer>
+
+<p>© 2026 Secure Bank | Secure Digital Banking</p>
+
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact Us | JobNest</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo-link">
+                <img src="Jobnest-logo.png" class="main-logo" alt="JobNest Logo">
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Find Jobs</a>
+                <a href="categories.html">Categories</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html" class="active">Contact</a>
+                
+
+
+            </nav>
+
+
+            <div class="nav-buttons">
+
+                <a href="signin.html" class="btn btn-outline btn-small">
+                    Sign In
+                </a>
+
+                <a href="create-account.html" class="btn btn-white btn-small">
+                    Create Account
+                </a>
+
+                <button
+                    class="menu-btn"
+                    onclick="toggleMenu()"
+                    aria-label="Open Menu"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="contact-hero">
+
+        <div class="container contact-hero-content">
+
+            <span class="eyebrow">CONTACT JOBNEST</span>
+
+            <h1>We're Here to Help</h1>
+
+            <p>
+                Have a question, need support, or want to learn more about
+                JobNest? Our team would love to hear from you.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT INFO ================= -->
+
+    <section class="contact-info-section">
+
+        <div class="container">
+
+            <div class="contact-info-grid">
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-info-card">
+
+                    <div class="contact-info-icon">✉️</div>
+
+                    <h3>Email Us</h3>
+
+                    <p>
+                        Send us an email and our team will get back to you.
+                    </p>
+
+                    <a href="mailto:support@jobnest.com">
+                        support@jobnest.com
+                    </a>
+
+                </div>
+
+
+                <!-- PHONE -->
+
+                <div class="contact-info-card">
+
+                    <div class="contact-info-icon">📞</div>
+
+                    <h3>Call Us</h3>
+
+                    <p>
+                        Speak directly with our support team.
+                    </p>
+
+                    <a href="tel:+923001234567">
+                        +92 300 1234567
+                    </a>
+
+                </div>
+
+
+                <!-- HOURS -->
+
+                <div class="contact-info-card">
+
+                    <div class="contact-info-icon">🕒</div>
+
+                    <h3>Working Hours</h3>
+
+                    <p>
+                        Monday - Friday
+                    </p>
+
+                    <strong>
+                        9:00 AM - 6:00 PM
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT FORM ================= -->
+
+    <section class="contact-main-section">
+
+        <div class="container contact-main-grid">
+
+
+            <!-- LEFT CONTENT -->
+
+            <div class="contact-content">
+
+                <span class="section-label">
+                    GET IN TOUCH
+                </span>
+
+                <h2>
+                    Let's Start a Conversation
+                </h2>
+
+                <p>
+                    Whether you are looking for a job, hiring talented people,
+                    or simply have a question about JobNest, we're ready to help.
+                </p>
+
+                <p>
+                    Fill out the form and we'll get back to you as soon as possible.
+                </p>
+
+
+                <div class="contact-benefits">
+
+                    <div>
+                        <span>✓</span>
+                        Quick response from our team
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Support for job seekers
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Employer assistance
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        General platform inquiries
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM -->
+
+            <div class="contact-form-wrapper">
+
+                <form id="contactForm" novalidate>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="contactName">
+                                Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                placeholder="Enter your full name"
+                            >
+
+                            <small class="error-message" id="nameError"></small>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="contactEmail">
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                placeholder="Enter your email"
+                            >
+
+                            <small class="error-message" id="emailError"></small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-row">
+
+                        <div class="form-group">
+
+                            <label for="contactPhone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="contactPhone"
+                                placeholder="+92 300 1234567"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="contactSubject">
+                                Subject
+                            </label>
+
+                            <select id="contactSubject">
+
+                                <option value="">
+                                    Select a subject
+                                </option>
+
+                                <option value="Job Search">
+                                    Job Search
+                                </option>
+
+                                <option value="Employer Support">
+                                    Employer Support
+                                </option>
+
+                                <option value="Technical Issue">
+                                    Technical Issue
+                                </option>
+
+                                <option value="Account Help">
+                                    Account Help
+                                </option>
+
+                                <option value="General Inquiry">
+                                    General Inquiry
+                                </option>
+
+                            </select>
+
+                            <small class="error-message" id="subjectError"></small>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-group full-width">
+
+                        <label for="contactMessage">
+                            Your Message
+                        </label>
+
+                        <textarea
+                            id="contactMessage"
+                            rows="6"
+                            placeholder="Tell us how we can help..."
+                        ></textarea>
+
+                        <small class="error-message" id="messageError"></small>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-primary contact-submit-btn"
+                    >
+                        Send Message →
+                    </button>
+
+
+                    <!-- SUCCESS MESSAGE -->
+
+                    <div
+                        class="contact-success"
+                        id="contactSuccess"
+                    >
+
+                        <span>✓</span>
+
+                        <div>
+
+                            <strong>
+                                Message Sent Successfully!
+                            </strong>
+
+                            <p>
+                                Thank you for contacting JobNest.
+                                We'll get back to you soon.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FAQ ================= -->
+
+    <section class="contact-faq-section">
+
+        <div class="container">
+
+            <div class="contact-section-heading">
+
+                <span class="section-label">
+                    FREQUENTLY ASKED QUESTIONS
+                </span>
+
+                <h2>
+                    Common Questions
+                </h2>
+
+                <p>
+                    Quick answers to common questions about JobNest.
+                </p>
+
+            </div>
+
+
+            <div class="faq-container">
+
+
+                <!-- FAQ 1 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            How do I search for jobs on JobNest?
+                        </span>
+
+                        <span class="faq-icon">+</span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Visit the Find Jobs page, use the search bar,
+                            filters, and categories to discover opportunities
+                            that match your skills and interests.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 2 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            Do I need an account to browse jobs?
+                        </span>
+
+                        <span class="faq-icon">+</span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            You can browse available jobs without an account.
+                            Creating an account helps you access additional
+                            features and manage your career journey.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 3 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            How can employers post jobs?
+                        </span>
+
+                        <span class="faq-icon">+</span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Employers can create an account and access the
+                            employer features to begin managing job
+                            opportunities and applications.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 4 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            How long does it take to receive a response?
+                        </span>
+
+                        <span class="faq-icon">+</span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Our support team aims to respond as quickly as
+                            possible during regular working hours.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAQ 5 -->
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        <span>
+                            Can I update my account information?
+                        </span>
+
+                        <span class="faq-icon">+</span>
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+                            Yes. Once account management features are available,
+                            you can update your profile and personal information
+                            through your account dashboard.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="contact-cta">
+
+        <div class="container contact-cta-box">
+
+            <div>
+
+                <span class="section-label light-label">
+                    EXPLORE OPPORTUNITIES
+                </span>
+
+                <h2>
+                    Ready to Take the Next Step?
+                </h2>
+
+                <p>
+                    Explore exciting opportunities and find a career that
+                    matches your skills and ambitions.
+                </p>
+
+            </div>
+
+            <a href="jobs.html" class="btn btn-white">
+                Browse Jobs →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <img
+                    src="Jobnest-logo.png"
+                    class="footer-logo"
+                    alt="JobNest Logo"
+                >
+
+                <p>
+                    Connecting talented people with meaningful opportunities
+                    and helping professionals build better futures.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>For Job Seekers</h3>
+
+                <a href="jobs.html">Browse Jobs</a>
+                <a href="categories.html">Job Categories</a>
+                <a href="about.html">Career Advice</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>For Employers</h3>
+
+                <a href="create-account.html">Post a Job</a>
+                <a href="jobs.html">Find Candidates</a>
+                <a href="signin.html">Employer Dashboard</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Company</h3>
+
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            © 2026 JobNest. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+
+</body>
+
+</html>
