@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Job Categories | JobNest</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo-link">
+                <img src="Jobnest-logo.png" class="main-logo" alt="JobNest Logo">
+            </a>
+
+
+            <nav class="nav-links">
+
+                <a href="index.html">Home</a>
+                <a href="jobs.html">Find Jobs</a>
+                <a href="categories.html" class="active">Categories</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+            
+
+            </nav>
+
+
+            <div class="nav-buttons">
+
+                <a href="signin.html" class="btn btn-outline btn-small">
+                    Sign In
+                </a>
+
+                <a href="create-account.html" class="btn btn-white btn-small">
+                    Create Account
+                </a>
+
+                <button class="menu-btn" onclick="toggleMenu()" aria-label="Open Menu">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="categories-hero">
+
+        <div class="container categories-hero-content">
+
+            <span class="eyebrow">Explore Opportunities</span>
+
+            <h1>Browse Jobs by Category</h1>
+
+            <p>
+                Discover exciting career opportunities across different industries.
+                Choose a category that matches your skills and interests.
+            </p>
+
+
+            <!-- CATEGORY SEARCH -->
+
+            <div class="category-search-box">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="categorySearch"
+                    placeholder="Search job categories..."
+                >
+
+                <button onclick="searchCategories()">
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories-section">
+
+        <div class="container">
+
+
+            <div class="categories-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        POPULAR CATEGORIES
+                    </span>
+
+                    <h2>Find Jobs That Match Your Skills</h2>
+
+                    <p id="categoryCount">
+                        Explore 12 popular job categories
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CATEGORY GRID -->
+
+            <div class="categories-grid" id="categoriesGrid">
+
+
+                <!-- CATEGORY 1 -->
+
+                <article
+                    class="category-card"
+                    data-category="Technology IT Software Developer Programming"
+                >
+
+                    <div class="category-icon"><img src="https://static.vecteezy.com/system/resources/previews/005/928/014/non_2x/it-logo-design-for-information-technology-company-logo-design-vector.jpg" alt="Technology & IT"></div>
+
+                    <h3>Technology & IT</h3>
+
+                    <p>
+                        Software development, web development,
+                        IT support and technology careers.
+                    </p>
+
+                    <div class="category-footer">
+
+                        <span>1,250 Jobs</span>
+
+                        <a href="jobs.html?category=Technology">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CATEGORY 2 -->
+
+                <article
+                    class="category-card"
+                    data-category="Design Creative Graphic UI UX"
+                >
+
+                    <div class="category-icon"><img src="https://img.magnific.com/free-vector/bird-colorful-gradient-design-vector_343694-2506.jpg?semt=ais_hybrid&w=740&q=80" alt="Design & Creative"></div>
+                   
+                    <h3>Design & Creative</h3>
+
+                    <p>
+                        Graphic design, UI/UX, visual design,
+                        animation and creative careers.
+                    </p>
+
+                    <div class="category-footer">
+
+                        <span>680 Jobs</span>
+
+                        <a href="jobs.html?category=Design">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CATEGORY 3 -->
+
+                <article
+                    class="category-card"
+                    data-category="Marketing Sales Digital Advertising"
+                >
+
+                    <div class="category-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpYqOg-0Z0FAjG6G_eI-IinOUhApuR1IejgWofo6oNUA&s=10" alt="Marketing & Sales"></div>
+
+                    <h3>Marketing & Sales</h3>
+
+                    <p>
+                        Digital marketing, sales, branding,
+                        advertising and growth opportunities.
+                    </p>
+
+                    <div class="category-footer">
+
+                        <span>940 Jobs</span>
+
+                        <a href="jobs.html?category=Marketing">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CATEGORY 4 -->
+
+                <article
+                    class="category-card"
+                    data-category="Business Management Administration"
+                >
+
+                    <div class="category-icon"><img src="https://www.clipartmax.com/png/middle/272-2727144_business-management-admin-debate-mate-logo.png" alt="Business & Management"></div>
+
+                    <h3>Business & Management</h3>
+
+                    <p>
+                        Business operations, management,
+                        consulting and administration roles.
+                    </p>
+
+                    <div class="category-footer">
+
+                        <span>810 Jobs</span>
+
+                        <a href="jobs.html?category=Business">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CATEGORY 5 -->
+
+                <article
+                    class="category-card"
+                    data-category="Finance Accounting Banking"
+                >
+
+                    <div class="category-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4ZRgC2qwyLMx9I8Yos8CCLYf27rlNeZyYhutrM1Isvw&s=10" alt="Finance & Accounting"></div>
+
+                    <h3>Finance & Accounting</h3>
+
+                    <p>
+                        Financial analysis, accounting,
+                        banking and investment careers.
+                    </p>
+
+                    <div class="category-footer">
+
+                        <span>720 Jobs</span>
+
+                        <a href="jobs.html?category=Finance">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CATEGORY 6 -->
+
+                <article
+                    class="category-card"
+                    data-category="Human Resources HR Recruitment"
+                >
+
+                    <div class="category-icon"><img src="https://t3.ftcdn.net/jpg/05/00/59/00/360_F_500590015_lqpHHXWkYXEW4SEEojEEQxlen2m6FWqq.jpg" alt="Human Resources"></div>
+
+                    <h3>Human Resources</h3>
+
+                    <p>
+                        Recruitment, talent acquisition,
+                        employee relations and HR careers.
+                    </p>
+
+                    <div class="category-footer">
+
+                        <span>540 Jobs</span>
+
+                        <a href="jobs.html?category=HR">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CATEGORY 7 -->
+
+                <article
+                    class="category-card"
+                    data-category="Healthcare Medical Nursing Doctor"
+                >
+
+                    <div class="category-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMV1BNa0bBSSoacx90gsuk8b9dyDOWT6E3CCoG4HCB6w&s=10" alt="Healthcare"></div>
+
+                    <h3>Healthcare</h3>
+
+                    <p>
+                        Medical, nursing, healthcare support
+                        and clinical opportunities.
+                    </p>
+
+                    <div class="category-footer">
+
+                        <span>1,080 Jobs</span>
+
+                        <a href="jobs.html?category=Healthcare">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CATEGORY 8 -->
+
+                <article
+                    class="category-card"
+                    data-category="Education Teaching Training Teacher"
+                >
+
+                    <div class="category-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQolImmUicGQh-T0qGsrcN0VhTUqaDP5PxQTZoPMuCFFA&s=10" alt="Education & Training"></div>
+
+                    <h3>Education & Training</h3>
+
+                    <p>
+                        Teaching, training, education support
+                        and academic career opportunities.
+                    </p>
+
+                    <div class="category-footer">
+
+                        <span>610 Jobs</span>
+
+                        <a href="jobs.html?category=Education">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CATEGORY 9 -->
+
+                <article
+                    class="category-card"
+                    data-category="Engineering Mechanical Civil Electrical"
+                >
+
+                    <div class="category-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKQTS-1aXkP8eVUUhBHRbJSmVW-BYWUe_BYDOm03Erz_5mF0y3uKq-HV-K&s=10" alt="Engineering"></div>
+
+                    <h3>Engineering</h3>
+
+                    <p>
+                        Mechanical, civil, electrical and
+                        professional engineering careers.
+                    </p>
+
+                    <div class="category-footer">
+
+                        <span>760 Jobs</span>
+
+                        <a href="jobs.html?category=Engineering">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CATEGORY 10 -->
+
+                <article
+                    class="category-card"
+                    data-category="Customer Service Support Call Center"
+                >
+
+                    <div class="category-icon"><img src="https://img.magnific.com/premium-vector/positive-dispatcher-happy-emotion-cartoon-emoticon-vector-stock_1249511-1073.jpg?semt=ais_hybrid&w=740&q=80" alt="Customer Service"></div>
+
+                    <h3>Customer Service</h3>
+
+                    <p>
+                        Customer support, client services,
+                        call center and support roles.
+                    </p>
+
+                    <div class="category-footer">
+
+                        <span>430 Jobs</span>
+
+                        <a href="jobs.html?category=Customer">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CATEGORY 11 -->
+
+                <article
+                    class="category-card"
+                    data-category="Legal Law Lawyer Compliance"
+                >
+
+                    <div class="category-icon"><img src="https://www.shutterstock.com/image-vector/legal-compliance-icon-vector-illustration-260nw-2300130511.jpg" alt="Legal & Compliance"></div>
+
+                    <h3>Legal & Compliance</h3>
+
+                    <p>
+                        Legal services, compliance,
+                        contracts and corporate law careers.
+                    </p>
+
+                    <div class="category-footer">
+
+                        <span>320 Jobs</span>
+
+                        <a href="jobs.html?category=Legal">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CATEGORY 12 -->
+
+                <article
+                    class="category-card"
+                    data-category="Remote Freelance Work From Home"
+                >
+
+                    <div class="category-icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDa6h5VoIuiiTILL0cvDtJ29SCKbI7zsa2ZVjxc3otjQ&s=10" alt="Remote Jobs"></div>
+
+                    <h3>Remote Jobs</h3>
+
+                    <p>
+                        Flexible remote opportunities from
+                        companies around the world.
+                    </p>
+
+                    <div class="category-footer">
+
+                        <span>1,500 Jobs</span>
+
+                        <a href="jobs.html?location=Remote">
+                            Explore →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+            <!-- NO RESULTS -->
+
+            <div class="category-no-results" id="categoryNoResults">
+
+                <div class="no-result-icon">🔎</div>
+
+                <h3>No Category Found</h3>
+
+                <p>
+                    Try searching with a different keyword.
+                </p>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="clearCategorySearch()"
+                >
+                    Show All Categories
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="categories-cta">
+
+        <div class="container categories-cta-box">
+
+            <div>
+
+                <span class="section-label light-label">
+                    FIND YOUR FUTURE
+                </span>
+
+                <h2>
+                    Don't See the Right Category?
+                </h2>
+
+                <p>
+                    Explore all available jobs and discover opportunities
+                    that match your experience and career goals.
+                </p>
+
+            </div>
+
+            <a href="jobs.html" class="btn btn-white">
+                Browse All Jobs →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-grid">
+
+            <div>
+
+                <img
+                    src="Jobnest-logo.png"
+                    class="footer-logo"
+                    alt="JobNest Logo"
+                >
+
+                <p>
+                    Connecting talented people with meaningful opportunities
+                    and helping professionals build better futures.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>For Job Seekers</h3>
+
+                <a href="jobs.html">Browse Jobs</a>
+                <a href="categories.html">Job Categories</a>
+                <a href="about.html">Career Advice</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>For Employers</h3>
+
+                <a href="create-account.html">Post a Job</a>
+                <a href="jobs.html">Find Candidates</a>
+                <a href="signin.html">Employer Dashboard</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>Company</h3>
+
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="privacy.html">Privacy Policy</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            © 2026 JobNest. All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+    <script src="categories.js"></script>
+
+</body>
+
+</html>
